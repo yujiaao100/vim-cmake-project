@@ -66,7 +66,8 @@ EOF
 " Interface
 command -nargs=1 -complete=file CMakeGen call s:cmake_gen_project(<f-args>)
 command -nargs=0 -bar CMakeBar call s:cmake_show_bar()
-map <Space> :call Cmake_on_space_clicked()<CR>
+"map <Space> :call Cmake_on_space_clicked()<CR>
+map <Enter> :call Cmake_on_space_clicked()<CR>
 
 " Implementation
 function! s:run_cmake(i_directory) abort
